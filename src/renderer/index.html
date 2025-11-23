@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>HTML a PDF</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="splash">
+    <div class="splash-content">
+      <div class="logo">
+        <span class="logo-text">opo</span><span class="logo-highlight">Test</span>
+      </div>
+      <div class="splash-loader"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="section">
+      <h2>Test con respuestas</h2>
+      <div id="dropzone1" class="dropzone">
+        <p>Arrastra hasta 10 archivos HTML</p>
+        <button class="selectBtn" data-zone="1">Selecciona archivo/s</button>
+      </div>
+      <div id="status1" class="status"></div>
+    </div>
+    <div class="section">
+      <h2>Test sin respuestas</h2>
+      <div id="dropzone2" class="dropzone">
+        <p>Arrastra hasta 10 archivos HTML</p>
+        <button class="selectBtn" data-zone="2">Selecciona archivo/s</button>
+      </div>
+      <div id="status2" class="status"></div>
+    </div>
+  </div>
+  <div id="controls">
+    <button id="convertBtn">Convertir a PDF</button>
+    <button id="clearBtn">Limpiar</button>
+  </div>
+  <div id="modal">
+    <div class="modal-content">
+      <h3>Título del PDF</h3>
+      <input type="text" id="titleInput" placeholder="Escribe el título...">
+      <div class="modal-buttons">
+        <button id="cancelBtn" style="background: #6c757d; color: white;">Cancelar</button>
+        <button id="okBtn" style="background: #007bff; color: white;">Aceptar</button>
+      </div>
+    </div>
+  </div>
+  <div id="loading">
+    <div class="spinner"></div>
+  </div>
+  <div id="alertModal">
+    <div class="alert-content">
+      <div id="alertIcon"></div>
+      <h3 id="alertTitle"></h3>
+      <p id="alertMessage"></p>
+      <button id="alertOkBtn">Aceptar</button>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
