@@ -26,8 +26,7 @@ function generateHtml(data, title = '', withAnswers = true) {
   <meta charset="UTF-8">
   <style>
     body { font-family: Arial, sans-serif; margin: 20px; }
-    .pdf-title { font-size: 18px; font-weight: bold; text-align: center; margin-bottom: 5px; }
-    .pdf-theme { font-size: 14px; text-align: center; color: #666; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 3px solid #333; }
+    .pdf-title { font-size: 18px; font-weight: bold; text-align: center; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 3px solid #333; }
     .question { page-break-inside: avoid; margin-bottom: 15px; border: 1px solid #ddd; padding: 10px; border-radius: 5px; }
     .title { font-size: 14px; font-weight: bold; margin-bottom: 8px; color: #333; }
     .answers { list-style: none; padding: 0; }
@@ -49,7 +48,6 @@ function generateHtml(data, title = '', withAnswers = true) {
 </head>
 <body>
 ${title ? `<div class="pdf-title">${title}</div>` : ''}
-${theme ? `<div class="pdf-theme">${theme}</div>` : ''}
 ${questions.map((q, i) => `
   <div class="question">
     <div class="title">${i + 1}. ${q.title}</div>
@@ -87,8 +85,7 @@ function generateBlankHtml(questions, title = '', theme = '') {
   <meta charset="UTF-8">
   <style>
     body { font-family: Arial, sans-serif; margin: 20px; }
-    .pdf-title { font-size: 18px; font-weight: bold; text-align: center; margin-bottom: 5px; }
-    .pdf-theme { font-size: 14px; text-align: center; color: #666; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 3px solid #333; }
+    .pdf-title { font-size: 18px; font-weight: bold; text-align: center; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 3px solid #333; }
     .question { page-break-inside: avoid; margin-bottom: 15px; border: 1px solid #ddd; padding: 10px; border-radius: 5px; }
     .title { font-size: 14px; font-weight: bold; margin-bottom: 8px; color: #333; }
     .answers { list-style: none; padding: 0; }
@@ -98,7 +95,6 @@ function generateBlankHtml(questions, title = '', theme = '') {
 </head>
 <body>
 ${title ? `<div class="pdf-title">${title}</div>` : ''}
-${theme ? `<div class="pdf-theme">${theme}</div>` : ''}
 ${questions.map((q, i) => `
   <div class="question">
     <div class="title">${i + 1}. ${q.title}</div>

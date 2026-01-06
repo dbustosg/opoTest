@@ -21,6 +21,7 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "iconv-lite": "^0.6.3",
     "jsdom": "^25.0.1"
   },
   "build": {
@@ -50,7 +51,10 @@
     },
     "mac": {
       "target": "dmg",
-      "category": "public.app-category.productivity"
+      "category": "public.app-category.productivity",
+      "hardenedRuntime": false,
+      "gatekeeperAssess": false,
+      "identity": null
     },
     "linux": {
       "target": [
